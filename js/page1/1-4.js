@@ -1,0 +1,35 @@
+$.get('data/page1/1-4.csv', function(csv) {
+	$('#container1-4').highcharts({
+		chart:{
+			type:'column',
+			backgroundColor:'#f5f5f5'},
+		plotOptions:{
+			column:{
+				stacking:'percent',
+				dataLabels:{
+					enabled:true,
+					color:'white',
+					style:{
+						textShadow:0,
+						fontSize:'8px'
+					}
+				}
+			}
+		},
+		data:{csv:csv},
+		title:{text:'グラフ1−4'},
+		yAxis:{
+			title:{
+				text : '割合(%)'
+			}
+		},
+		legend:{
+			borderWidth:1,
+			borderRadius:1,
+			backgroundColor:'#ffffff'
+		},
+		credits:{
+			enabled:false
+		}
+	});
+});
