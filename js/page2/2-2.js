@@ -10,8 +10,7 @@ $.get('data/page2/2-2.csv', function(csv) {
 					radius: 5,
 					states: {
 						hover: {
-							enabled: true,
-							lineColor: 'rgb(100,100,100)'
+							enabled: true
 						}
 					}
 				},
@@ -21,16 +20,17 @@ $.get('data/page2/2-2.csv', function(csv) {
                 }
 			}
 		},
-		data:{csv:csv
+		data:{
+		csv:csv
 		},
 		title:{text:'グラフ2−2'
 		},
-		xAxis:{	/*x軸を指定*/
+		xAxis:{
 			title:{
 				text : 'A'
 			}
 		},
-		yAxis:{	/*y軸を指定*/
+		yAxis:{
 			title:{
 				text : 'B'
 			}

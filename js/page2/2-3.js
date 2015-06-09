@@ -1,7 +1,7 @@
 $.get('data/page2/2-3.csv', function(csv) {
 	$('#container2-3').highcharts({
 		chart:{
-			polar:true,
+			polar:true,	/* グラフの種類を指定します。polarは極座標グラフです。。 */
 			type:'line',
 			backgroundColor:'#f5f5f5'
 		},
@@ -11,8 +11,8 @@ $.get('data/page2/2-3.csv', function(csv) {
 		title:{
 			text:'グラフ2−3'
 		},
-		xAxis:{	/*x軸を指定*/
-			categories:[
+		xAxis:{
+			categories:[	/*極を指定します*/
 				'A',
 				'B',
 				'C',
@@ -20,16 +20,16 @@ $.get('data/page2/2-3.csv', function(csv) {
 				'E',
 				'F'
 			],
-			tickmarkPlacement:'on',
-			lineWidth:0
+			tickmarkPlacement:'on',		/*軸線の位置を指定します*/
+			lineWidth:0		/*外周の線を指定します*/
 		},
 		yAxis: {
-			gridLineInterpolation: 'polygon',
+			gridLineInterpolation: 'polygon',	/*y軸の線を指定します。polygonで角状、circleで円状になります。*/
 			lineWidth: 0,
 			min: 0
 		},
 		tooltip: {
-            shared: true
+            shared: true	/*マウスオーバーで全ての系列の値を表示します。。*/
         },
 		legend:{
 			borderWidth:1,

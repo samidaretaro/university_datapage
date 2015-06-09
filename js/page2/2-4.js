@@ -1,7 +1,7 @@
 $.get('data/page2/2-4.csv', function(csv) {
 	$('#container2-4').highcharts({
 		chart:{
-			type:'bubble',
+			type:'bubble',		/* グラフの種類を指定します。bubbleはバブルチャートです。。 */
 			backgroundColor:'#f5f5f5'
 		},
 		data:{
@@ -10,12 +10,12 @@ $.get('data/page2/2-4.csv', function(csv) {
 		title:{
 			text:'グラフ2−4'
 		},
-		xAxis:{	/*x軸を指定*/
+		xAxis:{
 			title:{
 				text : 'A'
 			}
 		},
-		yAxis:{	/*y軸を指定*/
+		yAxis:{
 			title:{
 				text : 'B'
 			}

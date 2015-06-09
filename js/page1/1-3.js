@@ -1,7 +1,8 @@
 $.get('data/page1/1-3.csv', function(csv) {
 	$('#container1-3').highcharts({
 		chart:{
-			backgroundColor:'#f5f5f5'},
+			backgroundColor:'#f5f5f5'
+		},
 		plotOptions:{
 			column:{	/*棒グラフのプロットオプションを指定*/
 				dataLabels:{
@@ -22,8 +23,12 @@ $.get('data/page1/1-3.csv', function(csv) {
 				}
 			}
 		},
-		data:{csv:csv},
-		title:{text:'グラフ1−3'},
+		data:{
+			csv:csv
+		},
+		title:{
+			text:'グラフ1−3'
+		},
 		yAxis:[{	/*y1軸を指定*/
 			title:{
 				text : '人数(人)'
@@ -53,6 +58,8 @@ $.get('data/page1/1-3.csv', function(csv) {
 			borderRadius:1,
 			backgroundColor:'#ffffff'
 		},
-		credits:{enabled:false}
+		credits:{
+			enabled:false
+		}
 	});
 });

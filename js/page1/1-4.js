@@ -2,10 +2,11 @@ $.get('data/page1/1-4.csv', function(csv) {
 	$('#container1-4').highcharts({
 		chart:{
 			type:'column',
-			backgroundColor:'#f5f5f5'},
+			backgroundColor:'#f5f5f5'
+		},
 		plotOptions:{
 			column:{
-				stacking:'percent',
+				stacking:'percent',		/* グラフの種類を指定します。stacking:'percent'は100%積み上げグラフです。 */
 				dataLabels:{
 					enabled:true,
 					color:'white',
@@ -16,8 +17,12 @@ $.get('data/page1/1-4.csv', function(csv) {
 				}
 			}
 		},
-		data:{csv:csv},
-		title:{text:'グラフ1−4'},
+		data:{
+			csv:csv
+		},
+		title:{
+			text:'グラフ1−4'
+		},
 		yAxis:{
 			title:{
 				text : '割合(%)'
